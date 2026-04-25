@@ -1,0 +1,345 @@
+================================================================================
+                    ENVIRR INSTITUTE - WEBSITE DOCUMENTATION
+================================================================================
+
+PROJECT OVERVIEW
+================================================================================
+
+ENVIRR Institute is a professional educational coaching and tutoring website for
+students in Classes VI through XII. The website serves as an online platform to
+showcase the institute's services, faculty, courses, and provide an enquiry
+system for prospective students to book demo classes and get in touch.
+
+TAGLINE: "Shaping Futures, One Student at a Time"
+
+WEBSITE URL: http://localhost:5174/ (Development)
+
+
+KEY FEATURES
+================================================================================
+
+1. RESPONSIVE DESIGN
+   - Mobile-friendly layout using Tailwind CSS
+   - Optimized for desktop, tablet, and mobile devices
+   - Smooth animations using Framer Motion
+
+2. COURSE OFFERINGS
+   - CBSE and ICSE boards support
+   - Classes VI to XII
+   - Online and Offline learning modes available
+
+3. EXPERT FACULTY
+   - 4 experienced subject-specific teachers
+   - Years of teaching experience per teacher
+   - Teachers for Mathematics, Physics, Chemistry, and Biology
+
+4. INTERACTIVE CONTACT SYSTEM
+   - EmailJS integration for enquiry forms
+   - Form validation (all required fields must be filled)
+   - Real-time email notifications to the institute
+   - User-friendly success/error messages
+
+5. MAP INTEGRATION
+   - Clickable branch locations
+   - Opens Google Maps in new tab
+   - Two branch locations in Gurugram, Haryana
+
+6. SOCIAL INTEGRATION
+   - WhatsApp link for direct messaging
+   - Phone contact buttons
+   - Email contact information
+
+
+PAGE STRUCTURE & NAVIGATION
+================================================================================
+
+NAVBAR (Header)
+- Logo: "ENVIRR Institute"
+- Navigation Menu:
+  1. Home - Main landing page
+  2. About Us - Institute information
+  3. Courses - Available courses and programs
+  4. Faculty - Teacher profiles and qualifications
+  5. Results - Student achievements and toppers
+  6. Contact - Enquiry form and branch locations
+- Mobile hamburger menu for responsive navigation
+- Sticky positioning for easy access while scrolling
+
+HOME PAGE
+- Hero Section: Bold introduction with CTA button ("Book a Free Demo Class")
+- Stats Bar: Displays 500+ students, experienced teachers, 2 branches, CBSE & ICSE
+- Why Choose Us Section: 3 key benefits
+  * Expert Faculty
+  * Small Batches
+  * Online & Offline options
+- Toppers Section: Showcases top-performing students with scores
+- Call-to-Action: Links to contact page for enquiries
+
+ABOUT US PAGE
+- Currently placeholder - to be filled with detailed institute information
+
+COURSES PAGE
+- Two course tiers:
+  * Class VI - VIII: Math, Science, English, Social Studies
+  * Class IX - XII: Math, Physics, Chemistry, Biology
+- Display of available subjects
+- Board options: CBSE and ICSE
+- Learning modes: Online and Offline
+
+FACULTY PAGE
+- Professional listing of teachers
+- Teacher information includes:
+  * Name
+  * Subject specialization
+  * Years of experience
+  * Qualification (expandable field)
+
+RESULTS PAGE
+- Student toppers display
+- Scores and achievements
+- Name and percentage display
+
+CONTACT PAGE
+Two-column layout:
+
+LEFT COLUMN:
+- Branch Information (Clickable)
+  * Main Branch: Opposite Prakash Hospital, Madanpuri Rd, Sector 7, Gurugram
+  * Basai Enclave Branch: Basai Rd, Basai Village, Sector 9, Gurugram
+  * Click any branch to open in Google Maps
+
+- Contact Information:
+  * Phone: +91 9354736961 (clickable tel: link)
+  * WhatsApp: Chat directly via WhatsApp link
+
+RIGHT COLUMN:
+- Enquiry Form with fields:
+  * Your Name (required)
+  * Phone Number (required)
+  * Class Dropdown: VI, VII, VIII, IX, X, XI, XII (required)
+  * Board Dropdown: CBSE, ICSE (required)
+  * Mode Dropdown: Online, Offline (required)
+  * Message: Optional additional comments
+  * Submit Enquiry Button
+
+Form Features:
+  * Validation: Ensures all required fields are filled
+  * Loading State: Button shows "Submitting..." during submission
+  * Success Message: Green notification confirms email sent
+  * Error Handling: Red error message if submission fails
+  * Form Reset: Automatically clears after successful submission
+
+
+TECHNICAL ARCHITECTURE
+================================================================================
+
+FRONTEND TECHNOLOGY STACK:
+- Framework: React 19.2.4
+- Build Tool: Vite 8.0.8
+- Styling: Tailwind CSS 4.2.2
+- Routing: React Router DOM 7.14.0
+- Animations: Framer Motion 12.38.0
+- Icons: React Icons 5.6.0
+- Email Service: @emailjs/browser 4.4.1
+- Code Quality: ESLint 9.39.4
+
+CSS & STYLING:
+- Tailwind CSS v4 with new @import syntax
+- PostCSS for CSS processing
+- Tailwind handles responsive design (md: breakpoints)
+- Color scheme: Blue-900 primary, Red-500 accent, Gray for text
+- Custom spacing, rounded corners, shadows
+
+EMAIL INTEGRATION:
+- Service: EmailJS (emailjs.com)
+- Public Key: G9dgCe3WSAXp2J3EL
+- Service ID: service_3t29a69
+- Template ID: template_gbs0ujw
+- Email notifications sent to configured Gmail address
+- Template variables: name, phone, class, board, mode, message
+
+
+DATA STRUCTURE
+================================================================================
+
+INSTITUTE INFO:
+- Name: Envirr Institute
+- Phone: +91 9354736961
+- WhatsApp: +91 9354736961
+- Email: envirr.help@gmail.com
+- Branches: 2 locations in Gurugram, Haryana
+
+FACULTY DATABASE:
+1. Mr. Abhishek - Mathematics (10 years experience)
+2. Ms. Priya - Physics (8 years experience)
+3. Dr. Ramesh - Chemistry (12 years experience)
+4. Ms. Anjali - Biology (7 years experience)
+
+TOPPERS LIST:
+- Kartikey: 95%
+- Manav: 92%
+- Palak: 90%
+- Harsh: 88%
+- Sumit: 87%
+- Akash: 86%
+
+COURSES STRUCTURE:
+1. Lower Classes (VI-VIII)
+   Subjects: Math, Science, English, Social Studies
+   Boards: CBSE, ICSE
+   Modes: Online, Offline
+
+2. Higher Classes (IX-XII)
+   Subjects: Math, Physics, Chemistry, Biology
+   Boards: CBSE, ICSE
+   Modes: Online, Offline
+
+
+USER EXPERIENCE FEATURES
+================================================================================
+
+ANIMATIONS:
+- Hero text fade-in with slide animation
+- Smooth transitions on hover states
+- Card hover effects with shadow changes
+- Button hover color transitions
+
+INTERACTIVE ELEMENTS:
+- Clickable branch cards that open maps
+- Hover effects on all clickable elements
+- Form input focus states with ring borders
+- Mobile menu toggle functionality
+- Link routing without page reloads (SPA)
+
+MOBILE RESPONSIVENESS:
+- Hidden desktop menu on mobile (hamburger icon)
+- Single column layout on mobile, grid on desktop
+- Responsive text sizes (text-4xl → text-6xl on larger screens)
+- Touch-friendly button sizes and spacing
+
+ACCESSIBILITY:
+- Semantic HTML structure
+- Focus states on interactive elements
+- Color contrast for readability
+- Icon + text labels on buttons
+
+
+ENVIRONMENT CONFIGURATION
+================================================================================
+
+PROJECT FILES:
+- .env.local: Contains EmailJS credentials (not in git)
+- .gitignore: Excludes sensitive files and node_modules
+- tailwind.config.js: Tailwind CSS configuration
+- postcss.config.js: PostCSS with @tailwindcss/postcss plugin
+- vite.config.js: Vite build configuration
+- package.json: Dependencies and npm scripts
+
+KEY DEPENDENCIES INSTALLED:
+- npm install: Installs all packages from package.json
+- npm run dev: Starts Vite development server (default port 5173)
+- npm run build: Creates production build
+- npm run lint: Runs ESLint code quality checks
+- npm run preview: Preview production build locally
+
+
+PRODUCTION DEPLOYMENT CONSIDERATIONS
+================================================================================
+
+1. ENVIRONMENT VARIABLES
+   - Store EmailJS credentials in .env files
+   - Never commit sensitive data to repository
+   - Use CI/CD tools to inject secrets during deployment
+
+2. EMAIL SERVICE
+   - Ensure Gmail account is authorized in EmailJS
+   - Gmail needs "Less secure apps" access or OAuth2 setup
+   - Monitor sent emails in EmailJS dashboard
+
+3. FORM DATA
+   - Currently sends to configured email address only
+   - No database storage of enquiries (optional enhancement)
+   - Could add backend database for enquiry history
+
+4. SECURITY
+   - Input validation on form fields
+   - EmailJS handles CORS automatically
+   - Consider CAPTCHA for production to prevent spam
+
+5. PERFORMANCE
+   - Tailwind CSS optimizes unused classes
+   - Vite provides fast hot module replacement
+   - Images should be optimized before deployment
+
+
+FUTURE ENHANCEMENT OPPORTUNITIES
+================================================================================
+
+1. BACKEND INTEGRATION
+   - Store enquiries in MongoDB database
+   - Create admin dashboard to manage enquiries
+   - Add student login system
+
+2. PAYMENT INTEGRATION
+   - Accept online fee payments
+   - Integration with Razorpay or Stripe
+
+3. CONTENT ENHANCEMENTS
+   - Add more topper profiles with images
+   - Student testimonials section
+   - Blog/news updates
+   - Video testimonials
+
+4. ADVANCED FEATURES
+   - Online class scheduling system
+   - Student progress tracking
+   - Attendance management
+   - Assignment submission portal
+   - Real-time chat support
+
+5. ANALYTICS
+   - Track enquiry sources
+   - Monitor page performance
+   - User engagement metrics
+
+
+TROUBLESHOOTING NOTES
+================================================================================
+
+CSS NOT APPLYING:
+- Issue: Tailwind v4 syntax requires @import "tailwindcss"
+- Solution: Created postcss.config.js with @tailwindcss/postcss plugin
+- Resolved: Content path must be lowercase "content" not "Content"
+
+EMAIL NOT SENDING:
+- Issue: Gmail authentication scopes insufficient
+- Solution: Reauthorize Gmail in EmailJS with full permissions
+- Check: Template ID updated to template_gbs0ujw
+
+PORT CONFLICTS:
+- If 5173 is in use, Vite automatically uses 5174
+- Multiple instances of dev server can run on different ports
+
+
+SUMMARY
+================================================================================
+
+ENVIRR Institute website is a modern, responsive web application designed to
+help a coaching institute showcase its services, faculty, and courses while
+providing an easy way for prospective students to make enquiries. 
+
+The website combines:
+✓ Professional design with Tailwind CSS
+✓ Smooth animations with Framer Motion
+✓ Real-time email notifications via EmailJS
+✓ Mobile-responsive layout
+✓ Easy navigation and user-friendly interface
+✓ Production-ready enquiry system
+
+The current implementation is fully functional for the contact and enquiry
+features, with room for future enhancements in data persistence, payment
+integration, and advanced educational features.
+
+================================================================================
+                            END OF DOCUMENTATION
+================================================================================
